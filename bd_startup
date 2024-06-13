@@ -1,0 +1,26 @@
+create database startup;
+
+create table membro (
+membro_id INT PRIMARY KEY,
+nome VARCHAR(45),
+cargo VARCHAR(45)
+);
+
+create table tarefa (
+tarefa_id INT PRIMARY KEY,
+descricao  VARCHAR(45),
+membro_id INT,
+FOREIGN KEY (membro_id) REFERENCES membro (membro_id)
+);
+
+INSERT INTO membro (membro_id, nome, cargo) VALUES (1, 'Paulo', 'Programador 1');
+INSERT INTO tarefa (tarefa_id, descricao, membro_id) VALUES (1, 'Criar a classe produto', 1);
+
+SELECT coluna FROM tabela;
+SELECT nome, cargo FROM membros;
+SELECT descricao FROM tarefas;
+
+SELECT membro.nome, tarefa.descricao 
+FROM membro
+INNER JOIN tarefa
+ON membro.membro_id = tarefa.membro_id;
