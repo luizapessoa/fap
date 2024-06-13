@@ -1,0 +1,36 @@
+const readline = require ('readline-sync')
+
+const nome = readline.question('Digite o seu nome: ')
+const peso = parseFloat(readline.question('Digite o seu peso: '))
+const altura = parseFloat(readline.question('Digite a sua altura: '))
+
+var agua_ideal = parseFloat (peso * 0.035)
+agua_ideal = agua_ideal.toFixed(3)
+
+var imc = parseFloat (peso / altura **2)
+imc = imc.toFixed(2)
+
+console.log("nome: " + nome +
+" - altura: " + altura +
+" - peso: " + peso +
+" - quantidade de água/dia: " + agua_ideal +
+" - imc: " + imc + " - ")
+
+if (imc < 18.5) {
+console.log('você está abaixo do peso')
+
+} else if (imc >= 18.5  && imc < 25) {
+console.log('você está no peso ideal')
+
+}  else if (imc >= 25 && imc < 30) {
+console.log('você está com sobrepeso')
+
+} else if (imc >= 30 && imc < 35) {
+console.log('você está com obesidade grau I')
+
+} else if (imc >= 35 && imc < 40) {
+console.log('você está com obesidade grau II')
+
+} else {
+console.log('você está com obesidade grau 3 (mórbida)')
+}
