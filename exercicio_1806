@@ -1,0 +1,10 @@
+let minhaString = 'Olá, mundo!'
+let minhaOutraString = 'Olá novamente!'
+let minhaStringComVariaveis = `${minhaString} - ${minhaOutraString}`
+
+console.log(minhaStringComVariaveis)
+
+let nome = 'Maria'
+let idade = 18;
+let mensagem = 'olá, meu nome é '.concat (nome, " e tenho ", idade, " anos.");
+console.log(mensagem)
