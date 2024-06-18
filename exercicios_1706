@@ -1,0 +1,26 @@
+const readline = require('readline-sync')
+
+// exercicio 1
+const nota1 = parseFloat (readline.question('digite a sua primeira nota: '))
+const nota2 = parseFloat (readline.question('digite a sua segunda nota: '))
+const nota3 = parseFloat (readline.question('digite a sua terceira nota: '))
+const nota4 = parseFloat (readline.question('digite a sua quarta nota: '))
+
+const media = (nota1 + nota2 + nota3 + nota4) / 4
+
+console.log(media)
+
+// exercicio 2
+const medidaMetro = parseFloat (readline.question ('digite a sua medida em metros: '))
+
+const medidaCentimetro = medidaMetro * 100
+
+console.log('sua medida em centímetros é igual a', medidaCentimetro, 'cm.')
+
+// exercicio 3
+const horaValor = parseFloat (readline.question ('insira o valor recebido por hora trabalhada: '))
+const horaTrabalhada = parseFloat (readline.question ('insira a quantidade de horas trabalhadas: '))
+
+const salario = horaValor * horaTrabalhada
+
+console.log('seu salário no mês de junho é de R$', salario)
